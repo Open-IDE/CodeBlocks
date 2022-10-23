@@ -18,4 +18,7 @@ https://wiki.codeblocks.org/index.php/Keyboard_Shortcuts
 > go to "Project -> Properties -> Build targets", make sure your target is of type "Console project" and you have checked "Pause when execution ends".
 
 ## use Gnome-Terminal
-Solution: https://forums.codeblocks.org/index.php?topic=16826.0
+Solution:
+- [discuss: topic=16826](https://forums.codeblocks.org/index.php?topic=16826.0)
+
+> change the setting Environment->General->Change Console Program
