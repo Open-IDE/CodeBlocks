@@ -1,0 +1,7 @@
+---
+- name: Install Code::Blocks
+  ansible.builtin.dnf:
+    name:
+      - codeblocks
+    state: latest
+  become: true
