@@ -12,6 +12,9 @@ https://wiki.codeblocks.org/index.php/Keyboard_Shortcuts
 - [sch:](https://www.google.com/search?q=codeblocks+%22Pause+when+execution+ends%22)
 - [discuss:](https://forums.codeblocks.org/index.php?topic=8396.0)
 
+## Autosave
+- https://documentation.help/CodeBlocks/main_codeblocks_35.htm
+
 ### Solution:
 - [discuss: topic=13713.0](https://forums.codeblocks.org/index.php?topic=13713.0)
 
