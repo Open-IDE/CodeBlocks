@@ -1,8 +1,7 @@
 ---
-- hosts: local
+- hosts: fedora, ubuntu, local
   vars:
-    somevar: "value"
     source: "package"
 
   roles:
-  - Code Blocks
+  - Code Blocks/default

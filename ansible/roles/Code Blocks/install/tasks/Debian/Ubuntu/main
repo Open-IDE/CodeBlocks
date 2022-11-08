@@ -1,7 +1,6 @@
 ---
-- name: Install 
+- name: Install Code::Blocks
   ansible.builtin.apt:
     pkg:
-    - foo
-    - foo-tools
+    - codeblocks
   become: true
