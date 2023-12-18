@@ -1,8 +1,0 @@
----
-- hosts: fedora, ubuntu, local
-  vars:
-    source: "package"
-    compiler: "GNU c++"
-
-  roles:
-  - Code Blocks/default

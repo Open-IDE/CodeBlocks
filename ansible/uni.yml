@@ -1,0 +1,7 @@
+---
+- hosts: localhost #, node
+  vars:
+    compiler: "GNU C++"
+
+  roles:
+  - Code Blocks
