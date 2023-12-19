@@ -1,0 +1,6 @@
+- name: community Fix. works!
+  ansible.builtin.shell: autoreconf --install   # from: https://www.libraw.org/comment/6483#comment-6483
+  args:
+    chdir: "{{ subversion_dir }}"
+    creates: "{{ subversion_dir }}/config.log"
+  when: community_fix

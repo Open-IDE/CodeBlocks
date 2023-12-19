@@ -1,8 +1,2 @@
 - debug:
-    msg: "Building on RedHat {{ subversion_dir }}"
-
-- name: Retrieve from SVN
-  ansible.builtin.subversion:
-    repo: "{{ Repository_URL }}"
-    dest: "{{ subversion_dir }}"
-    update: no
+    msg: "Building .rpm on RedHat"

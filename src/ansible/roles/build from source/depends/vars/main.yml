@@ -1,3 +1,3 @@
 latest_compatible_ubuntu: 22.04
 
-RPM_TOPDIR: "{{ ansible_env.HOME }}/rpmbuild"
+RPM_TOPDIR: "{{ ansible_env.HOME }}/rpm"
