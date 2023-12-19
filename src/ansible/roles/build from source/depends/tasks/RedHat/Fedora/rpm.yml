@@ -29,10 +29,21 @@
         - rpm-build
         - subversion
         - wxGTK-devel
+      # configure --with-contrib-plugins=all
+        - hunspell
+        - hunspell-devel
       state: latest
   become_method: "su"  # Passwordless become in Toolbox
   when: ansible_nodename == "toolbox"
 
+- name: dependency RPM Sphere
+  ansible.builtin.include_role:
+    name: RPM Sphere
+
+- meta: end_play
+
+- name: gamin-devel from RPM Sphere
+  include_tasks: '{{ ansible_os_family }}/RPM Sphere/main.yml'
 
 - name: Non-root rpmbuild environment
   ansible.builtin.script: rpmbuild_env.sh
