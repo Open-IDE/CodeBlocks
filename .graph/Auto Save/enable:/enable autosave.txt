@@ -1,0 +1,22 @@
+in ~/.config/codeblocks/default.conf
+
+```
+			<DOMAIN42>
+				<str>
+					<![CDATA[Autosave]]>
+				</str>
+			</DOMAIN42>
+```
+
+and
+```
+	<autosave>
+		<DO_PROJECT bool="1" />
+		<DO_SOURCES bool="1" />
+		<DO_WORKSPACE bool="1" />
+		<ALL_PROJECTS bool="1" />
+		<PROJECT_MINS int="5" />
+		<SOURCE_MINS int="1" />
+		<METHOD int="2" />
+	</autosave>
+```
