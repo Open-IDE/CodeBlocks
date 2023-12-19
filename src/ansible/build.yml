@@ -3,4 +3,4 @@
   vars:
     debug: true
   roles:
-  - build from source
+  - from source

@@ -3,4 +3,4 @@
   remote_user: vagrant
 
   roles:
-    - build from source
+    - from source

@@ -1,6 +1,11 @@
 container_name: build-codeblocks
 
 os: ubuntu
-version: 22.04
+# version: 22.04
+
+latest_ubuntu_works_codename: "jammy"
+
+latest_ubuntu_works_ver: 22.04
+
 
 # example: distrobox create --pull --image ubuntu:22.04 --name build-codeblocks --home ~/distrobox/build-codeblocks

@@ -1,6 +1,0 @@
-# https://rpmsphere.github.io/
-
-# https://fedora.pkgs.org/38/rpm-sphere-x86_64/gamin-devel-0.1.10-32.x86_64.rpm.html
-
-- debug:
-    msg: "Use RPM Fusion!"

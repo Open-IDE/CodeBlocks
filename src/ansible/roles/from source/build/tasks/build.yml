@@ -8,7 +8,6 @@
     update: no
 
 - meta: end_play
-  when: debug
 
 - name: Step 1. bootstrap
   ansible.builtin.shell: ./bootstrap

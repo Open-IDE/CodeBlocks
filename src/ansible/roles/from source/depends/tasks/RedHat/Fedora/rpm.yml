@@ -1,0 +1,44 @@
+---
+# https://wiki.codeblocks.org/index.php/Installing_Code::Blocks_from_source_on_RPM_based_distributions
+
+- name: dependency RPM Sphere
+  ansible.builtin.include_role:
+    name: RPM Sphere
+
+- name: Install build tools # https://github.com/ansible/ansible/issues/13222
+  yum:
+    name: "@Development tools"
+    state: present
+  become: yes
+
+- name: Install Build Dependencies
+  become: true
+  ansible.builtin.dnf:
+    name:
+    # Delete uneeded
+      # - unzip
+      # - make
+      # - gettext
+      # - autoconf
+      # - automake
+      # - libtool
+      # - m4
+      # - intltool
+      # - gcc-c++
+      # - libstdc++
+      # - libstdc++-devel
+    # Required
+      - rpm-build
+      - subversion
+      - wxGTK-devel
+    # configure --with-contrib-plugins=all
+      - hunspell
+      - hunspell-devel
+    #from RPM Sphere   # https://fedora.pkgs.org/38/rpm-sphere-x86_64/gamin-devel-0.1.10-32.x86_64.rpm.html, https://rpmsphere.github.io/
+      - gamin-devel
+    state: latest
+
+- name: Non-root rpmbuild environment
+  ansible.builtin.script: rpmbuild_env.sh
+  args:
+    creates: "{{ ansible_env.HOME }}/.rpmmacros"
