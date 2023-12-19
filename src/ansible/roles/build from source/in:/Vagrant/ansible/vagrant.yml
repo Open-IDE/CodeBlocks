@@ -1,0 +1,6 @@
+- name: Vagrant
+  hosts: default
+  remote_user: vagrant
+
+  roles:
+    - build from source
