@@ -1,4 +1,37 @@
-- name: Create a directory
-  ansible.builtin.file:
-    path: "{{ build_dir }}"
-    state: directory
+---
+# https://wiki.codeblocks.org/index.php/Installing_Code::Blocks_from_source_on_Linux
+
+- name: Retrieve from SVN
+  ansible.builtin.subversion:
+    repo: "{{ Repository_URL }}"
+    dest: "{{ subversion_dir }}"
+    update: no
+
+- name: community Fix. works!
+  ansible.builtin.shell: autoreconf --install   # from: https://www.libraw.org/comment/6483#comment-6483
+  args:
+    chdir: "{{ subversion_dir }}"
+    creates: "{{ subversion_dir }}/config.log"
+  when: community_fix
+
+- name: Step 1. bootstrap
+  ansible.builtin.shell: ./bootstrap
+  args:
+    chdir: "{{ subversion_dir }}"
+    creates: "{{ subversion_dir }}/compile"
+
+- name: Step 2. configure
+  ansible.builtin.shell: ./configure
+  args:
+    chdir: "{{ subversion_dir }}"
+    creates: "{{ subversion_dir }}/config.log"
+
+- name: Build CodeBlocks
+  community.general.make:
+    chdir: "{{ subversion_dir }}"
+
+- name: Install
+  community.general.make:
+    chdir: "{{ subversion_dir }}"
+    target: install
+  become: true

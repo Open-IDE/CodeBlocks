@@ -1,1 +1,7 @@
 build_dir: "{{ ansible_env.HOME }}/devel"
+
+subversion_dir: "{{ build_dir }}/trunk"
+
+Repository_URL: "svn://svn.code.sf.net/p/codeblocks/code/trunk"
+
+community_fix: false

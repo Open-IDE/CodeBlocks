@@ -1,13 +1,17 @@
-- name: Start Distrobox
+- name: Distrobox build environment
   ansible.builtin.include_role:
     name: "{{ item}}"
   loop:
-  - Distrobox
+  - "{{ this }}/Distrobox"
   when: not in_Distrobox
 
-- name: Build inside
+
+- name: Install Dependencies
   ansible.builtin.include_role:
-    name: "{{ item}}"
-  loop:
-  - build from source/build
+    name: "{{ this }}/depends"
   when: in_Distrobox
+
+- name: Build CodeBlocks
+  ansible.builtin.include_role:
+    name: "{{ this }}/build"
+  when: in_Distrobox and not debug

@@ -1,13 +1,33 @@
 ---
-# https://wiki.codeblocks.org/index.php/Installing_Code::Blocks_nightly_build_on_Ubuntu
-
 - name: Install Dependencies
   ansible.builtin.apt:
     pkg:
+    # https://wiki.codeblocks.org/index.php/Installing_Code::Blocks_nightly_build_on_Ubuntu
     - build-essential
     - gdb
     - libwxgtk3.0-gtk3-0v5
     - libwxgtk3.0-gtk3-dev
+    # more
+    # https://wiki.codeblocks.org/index.php/Installing_Code::Blocks_from_source_on_Linux
+    - libgtk2.0-0
+    - subversion
+    # automake
+    - automake
+    # ./bootstrap error
+    - libtool
+    # ./configure error
+    - zlib1g
+    # - glib-2.0 Try alt: https://launchpad.net/ubuntu/+source/glib2.0
+    - libglib2.0-dev
+    - libgtk-3-dev
+    # *possible Fix
+    - pkg-config
+  become: true
+
+- name: glib-2.0 metapackage, install by hand
+  ansible.builtin.shell: apt-get -y install glib-2.0
+  args:
+    creates: /usr/include/glib-2.0/glib.h
   become: true
 
 # new pkg names:
