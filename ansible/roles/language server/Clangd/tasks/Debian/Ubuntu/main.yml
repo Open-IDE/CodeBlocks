@@ -1,13 +1,8 @@
 ---
-- include_tasks: 'from:/{{ source }}/main.yml'
-  when: in == "native" and not repository
-
-- name: Install 
+# https://clangd.llvm.org/installation#installing-clangd
+- name: Install Clangd Language Server
   ansible.builtin.apt:
     pkg:
-    - htop
+    - clangd-12
+    - clang-tools
   become: true
-  when: repository
-
-- include_tasks: "common/{{ubuntu_default}}/main.yml"
-
