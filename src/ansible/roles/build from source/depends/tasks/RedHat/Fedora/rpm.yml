@@ -1,0 +1,43 @@
+---
+# https://wiki.codeblocks.org/index.php/Installing_Code::Blocks_from_source_on_RPM_based_distributions
+
+- name: passwordless in Toolbox
+  block:
+  - name: Install build tools # https://github.com/ansible/ansible/issues/13222
+    yum:
+      name: "@Development tools"
+      state: present
+    become: yes
+
+  - name: Install Build Dependencies
+    become: true
+    ansible.builtin.dnf:
+      name:
+      # Delete uneeded
+        # - unzip
+        # - make
+        # - gettext
+        # - autoconf
+        # - automake
+        # - libtool
+        # - m4
+        # - intltool
+        # - gcc-c++
+        # - libstdc++
+        # - libstdc++-devel
+      # Required
+        - rpm-build
+        - subversion
+        - wxGTK-devel
+      state: latest
+  become_method: "su"  # Passwordless become in Toolbox
+  when: ansible_nodename == "toolbox"
+
+
+- name: Non-root rpmbuild environment
+  ansible.builtin.script: rpmbuild_env.sh
+  args:
+    creates: "{{ ansible_env.HOME }}/.rpmmacros"
+
+- debug:
+    msg: "{{ RPM_TOPDIR }}"
