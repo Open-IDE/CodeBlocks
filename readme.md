@@ -1,7 +1,12 @@
 # Code::Blocks
+# Vs. VS Code
+**Has Poor IntelliSense compared to VS Code!**
+
+# Vs. Eclipse CDT
 Has better Autocomplete than Eclipse CDT (which doesn't work at all). Was built for C, C++, and Fortran!
 
-- home: https://www.codeblocks.org/
+# Home:
+- https://www.codeblocks.org/
 - wiki: https://en.wikipedia.org/wiki/Code::Blocks
 
 # Keyboard Shortcuts
