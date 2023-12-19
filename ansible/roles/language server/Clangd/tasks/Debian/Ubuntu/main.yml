@@ -3,6 +3,6 @@
 - name: Install Clangd Language Server
   ansible.builtin.apt:
     pkg:
-    - clangd-12
+    - "clangd-{{ clangd_version }}"
     - clang-tools
   become: true
