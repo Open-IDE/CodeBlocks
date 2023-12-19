@@ -1,2 +1,10 @@
 - name: OS specific
   include_tasks: '{{ ansible_os_family }}/main.yml'
+  when: in_Distrobox
+
+- debug:
+    msg: "Not in Distrobox, Exiting!"
+  when: not in_Distrobox
+
+- meta: end_host
+  when: not in_Distrobox

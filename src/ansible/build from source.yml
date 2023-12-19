@@ -1,5 +1,6 @@
 ---
 - hosts: localhost #, node
+  vars:
+    debug: true
   roles:
-  # - build from source
-  - .fn/detect/distrobox
+  - build from source

@@ -1,4 +1,5 @@
 ---
 dependencies:
+- .fn/detect/distrobox
 - build from source/in:/Distrobox
 - build from source/depends
