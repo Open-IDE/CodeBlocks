@@ -4,5 +4,7 @@
     compiler: "GNU C++"
 
   roles:
-  - Code Blocks
   - language server/Clangd
+  - Code Blocks
+
+# The package in repositories too old to use Clangd. If you want to use latest Clangd code completion? You have to build from source.

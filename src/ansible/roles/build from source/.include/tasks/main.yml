@@ -1,0 +1,13 @@
+- name: Start Distrobox
+  ansible.builtin.include_role:
+    name: "{{ item}}"
+  loop:
+  - Distrobox
+  when: not in_Distrobox
+
+- name: Build inside
+  ansible.builtin.include_role:
+    name: "{{ item}}"
+  loop:
+  - build from source/build
+  when: in_Distrobox
