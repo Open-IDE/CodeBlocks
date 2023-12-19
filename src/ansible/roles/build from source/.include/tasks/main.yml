@@ -2,7 +2,7 @@
   ansible.builtin.include_role:
     name: "{{ item}}"
   loop:
-  - "{{ this }}/Distrobox"
+  - "{{ this }}/in:/Distrobox"
   when: not in_Distrobox
 
 
