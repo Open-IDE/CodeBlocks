@@ -1,0 +1,2 @@
+
+example: distrobox create --pull --image ubuntu:22.04 --name build-codeblocks --home ~/distrobox/build-codeblocks

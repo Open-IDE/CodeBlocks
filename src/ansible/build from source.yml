@@ -1,0 +1,4 @@
+---
+- hosts: localhost #, node
+  roles:
+  - build from source
