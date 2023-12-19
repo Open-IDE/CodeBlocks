@@ -1,8 +1,0 @@
----
-# https://clangd.llvm.org/installation#installing-clangd
-- name: Install Clangd Language Server
-  ansible.builtin.apt:
-    pkg:
-    - "clangd-{{ clangd_version }}"
-    - clang-tools
-  become: true
