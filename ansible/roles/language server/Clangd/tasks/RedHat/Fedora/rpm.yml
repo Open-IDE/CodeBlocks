@@ -1,0 +1,6 @@
+---
+- name: Install Clangd Language Server
+  become: true
+  ansible.builtin.dnf:
+    name: clang-tools-extra
+    state: latest
