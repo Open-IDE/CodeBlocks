@@ -1,2 +1,6 @@
+container_name: build-codeblocks
 
-example: distrobox create --pull --image ubuntu:22.04 --name build-codeblocks --home ~/distrobox/build-codeblocks
+os: ubuntu
+version: 22.04
+
+# example: distrobox create --pull --image ubuntu:22.04 --name build-codeblocks --home ~/distrobox/build-codeblocks
