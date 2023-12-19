@@ -21,12 +21,12 @@
       # - gettext
       # - autoconf
       # - automake
-      # - libtool
       # - m4
       # - intltool
       # - gcc-c++
       # - libstdc++
       # - libstdc++-devel
+      - libtool
     # Required
       - rpm-build
       - subversion
