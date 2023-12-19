@@ -38,6 +38,3 @@
   ansible.builtin.script: rpmbuild_env.sh
   args:
     creates: "{{ ansible_env.HOME }}/.rpmmacros"
-
-- debug:
-    msg: "{{ RPM_TOPDIR }}"

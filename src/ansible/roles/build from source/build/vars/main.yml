@@ -1,6 +1,12 @@
-build_dir: "{{ ansible_env.HOME }}/devel"
+rpm_dir: "rpmbuild"
 
-subversion_dir: "{{ build_dir }}/trunk"
+top_dir: "{{ 'devel' if ansible_os_family == 'Debian' else rpm_dir if ansible_os_family == 'RedHat'}}"
+
+build_dir: "{{ ansible_env.HOME }}/{{ top_dir }}"
+
+trunk_name: "{{ 'trunk' if ansible_os_family == 'Debian' else 'SOURCES' if ansible_os_family == 'RedHat' }}"
+
+subversion_dir: "{{ build_dir }}/{{ trunk_name }}"
 
 Repository_URL: "svn://svn.code.sf.net/p/codeblocks/code/trunk"
 

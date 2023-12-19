@@ -14,4 +14,4 @@
 - name: Build CodeBlocks
   ansible.builtin.include_role:
     name: "{{ this }}/build"
-  when: in_Distrobox and build
+  when: in_Distrobox
