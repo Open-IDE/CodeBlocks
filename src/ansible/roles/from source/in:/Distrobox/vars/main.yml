@@ -8,4 +8,4 @@ latest_ubuntu_works_codename: "jammy"
 latest_ubuntu_works_ver: 22.04
 
 
-# example: distrobox create --pull --image ubuntu:22.04 --name build-codeblocks --home ~/distrobox/build-codeblocks
+# example: distrobox create --pull --image ubuntu:22.04 --name build-codeblocks --home ~/.uni/hyper/distrobox/build-codeblocks
