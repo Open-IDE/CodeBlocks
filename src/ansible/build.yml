@@ -1,7 +1,11 @@
 ---
-# Clangd Works for ArchLinux AUR in distrobox!
-- hosts: localhost #, node
+# The ArchLinux AUR in distrobox is the only one that works for me.
+# Todo: Fix Ubuntu and Fedora builds.
+
+- name: Build Codeblocks to get latest Clangd_client
+  hosts: localhost #, node
   vars:
+    os: ArchLinux
     debug: true
   roles:
   - from source
