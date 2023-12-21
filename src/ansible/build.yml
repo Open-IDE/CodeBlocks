@@ -1,8 +1,9 @@
 ---
 # The ArchLinux AUR in distrobox is the only one that works for me.
 # Todo: Fix Ubuntu and Fedora builds.
+# Ubuntu is using 22.04 LTS because of discontinued dependencies.
 
-- name: Build Codeblocks to get latest Clangd_client
+- name: Build Codeblocks in Distrobox to get latest plugin/Clangd_Client
   hosts: localhost #, node
   vars:
     os: ArchLinux
