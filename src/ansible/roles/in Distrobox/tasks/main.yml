@@ -4,5 +4,5 @@
   when: in_container and ansible_env.container is not defined
 
 - name: debug( Run Ansible )
-  ansible.builtin.include_tasks: handle/run Ansible.yml
-  when: (in_container and ansible_env.container is not defined) and debug
+  ansible.builtin.include_tasks: .handler/run Ansible.yml
+  when: in_container and ansible_env.container is not defined
