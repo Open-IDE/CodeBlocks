@@ -1,0 +1,3 @@
+- name: OS specific
+  include_tasks: '{{ ansible_distribution }}/main.yml'
+  when: not in_container

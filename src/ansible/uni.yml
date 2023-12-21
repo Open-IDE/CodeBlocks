@@ -2,8 +2,6 @@
 - name: Install CodeBlocks & Clangd Language Server
   hosts: localhost # , node
   vars:
-    compiler: "GCC"
-    in_container: Distrobox
     build_from_source: false
 
   roles:

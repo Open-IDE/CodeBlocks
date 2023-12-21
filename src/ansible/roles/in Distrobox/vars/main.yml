@@ -1,3 +1,5 @@
+in_container: Distrobox
+
 container_name: "codeblocks"
 
 container_name_process: "codeblocks.distrobox"
