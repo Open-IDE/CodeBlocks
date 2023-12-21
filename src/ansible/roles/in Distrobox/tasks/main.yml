@@ -3,6 +3,6 @@
   include_tasks: create Container.yml
   when: in_container and ansible_env.container is not defined
 
-- name: Run Ansible
+- name: debug( Run Ansible )
   ansible.builtin.include_tasks: handle/run Ansible.yml
-  when: in_container and ansible_env.container is not defined
+  when: (in_container and ansible_env.container is not defined) and debug

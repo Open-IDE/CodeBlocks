@@ -2,6 +2,5 @@
 - name: Install Ansible
   ansible.builtin.include_tasks: .handler/install Ansible.yml
 
-# - name: debug( Run Ansible )
-#   ansible.builtin.include_tasks: .handler/run Ansible.yml
-#   when: debug
+- name: Run Ansible
+  ansible.builtin.include_tasks: .handler/run Ansible.yml
