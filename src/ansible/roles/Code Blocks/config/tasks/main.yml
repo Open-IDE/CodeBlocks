@@ -3,4 +3,3 @@
   include_tasks: "{{ item }}.yml"
   loop:
     - Autosave
-  when: ( in_container is not defined ) or ( ansible_env.container is defined )
