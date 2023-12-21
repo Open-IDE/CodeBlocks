@@ -7,8 +7,6 @@
     dest: "{{ subversion_dir }}"
     update: no
 
-- meta: end_play
-
 - name: Step 1. bootstrap
   ansible.builtin.shell: ./bootstrap
   args:
