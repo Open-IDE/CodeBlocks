@@ -2,4 +2,24 @@
   community.general.pacman:
     name:
       - hunspell
+    state: present
+    update_cache: true
+  become: true
+
+- name: Clangd
+  community.general.pacman:
+    name:
+      - extra/clang
+    state: present
+    update_cache: true
+  become: true
+
+- name: build Dependencies
+  community.general.pacman:
+    name:
+      - base-devel
+      - git
+      - subversion
+    state: present
+    update_cache: true
   become: true
