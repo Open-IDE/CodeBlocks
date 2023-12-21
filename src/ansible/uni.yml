@@ -4,6 +4,7 @@
   vars:
     build_from_source: false
     # compiler: Clang
+    rerun_ansible_in_container: true
 
   roles:
   # - language server/Clangd
