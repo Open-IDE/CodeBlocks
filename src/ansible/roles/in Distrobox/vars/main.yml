@@ -6,6 +6,8 @@ container_home: "{{ ansible_env.HOME }}/.uni/container/distrobox/{{ container_na
 
 container_image: "ubuntu:latest"
 
+bin_dir: "{{ container_home }}/bin"
+
 install_Ansible: "install_Ansible.sh"
 
 install_Ansible_path: "{{ bin_dir }}/install-Ansible.sh"
