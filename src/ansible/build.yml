@@ -1,5 +1,5 @@
 ---
-# Works for ArchLinux AUR in distrobox!
+# Clangd Works for ArchLinux AUR in distrobox!
 - hosts: localhost #, node
   vars:
     debug: true
