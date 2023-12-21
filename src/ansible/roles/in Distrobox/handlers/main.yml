@@ -1,4 +1,3 @@
----
 - name: Install Ansible
   ansible.builtin.include_tasks: .handler/install Ansible.yml
 
