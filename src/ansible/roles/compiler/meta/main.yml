@@ -1,3 +1,0 @@
----
-dependencies:
-- compiler/{{ compiler if compiler is defined else 'GCC'}}

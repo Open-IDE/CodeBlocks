@@ -3,7 +3,7 @@
   hosts: localhost # , node
   vars:
     build_from_source: false
-    compiler: Clang
+    # compiler: Clang
 
   roles:
   # - language server/Clangd
