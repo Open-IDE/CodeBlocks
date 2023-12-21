@@ -1,5 +1,6 @@
 ---
 dependencies:
-- Code Blocks/install
-- Code Blocks/config
-- compiler
+# - compiler
+# - Code Blocks/install
+# - Code Blocks/config
+- { role: 'in Distrobox', when: in_container == 'Distrobox' }

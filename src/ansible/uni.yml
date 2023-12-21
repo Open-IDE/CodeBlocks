@@ -1,10 +1,11 @@
 ---
 - hosts: localhost #, node
   vars:
-    compiler: "GNU C++"
+    compiler: "GCC"
+    in_container: Distrobox
 
   roles:
-  - language server/Clangd
+  # - language server/Clangd
   - Code Blocks
 
 # The package in repositories too old to use Clangd. If you want to use latest Clangd code completion? You have to from source.
