@@ -1,1 +1,2 @@
-separate_home_directory: True
+---
+separate_home_directory: true

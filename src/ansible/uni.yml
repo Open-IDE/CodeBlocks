@@ -7,7 +7,7 @@
 
   roles:
   # - language server/Clangd
-    # - in Distrobox
+    - in Distrobox
     - Code Blocks
 
 # The package in repositories too old to use Clangd. If you want to use latest Clangd Language Server: you have to build from source.

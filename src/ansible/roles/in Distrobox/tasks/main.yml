@@ -2,3 +2,7 @@
 - name: Create Container
   include_tasks: create Container.yml
   when: in_container and ansible_env.container is not defined
+
+- name: Run Ansible
+  ansible.builtin.include_tasks: handle/run Ansible.yml
+  when: in_container and ansible_env.container is not defined

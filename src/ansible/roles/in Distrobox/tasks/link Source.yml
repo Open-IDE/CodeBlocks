@@ -1,0 +1,10 @@
+- debug:
+    msg: "{{ playbook_dir }}"
+
+- name: Create a symbolic link
+  ansible.builtin.file:
+    src: "{{ playbook_dir }}"
+    dest: "{{ container_home }}/{{ playbook_dir | basename }}"
+    state: link
+
+- meta: end_play
