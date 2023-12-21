@@ -1,0 +1,5 @@
+- name: Spell Checker - Hunspell
+  community.general.pacman:
+    name:
+      - hunspell
+  become: true
