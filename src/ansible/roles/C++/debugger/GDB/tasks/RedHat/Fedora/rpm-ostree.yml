@@ -1,9 +1,0 @@
-- name: Install GDB Debugger
-  community.general.rpm_ostree_pkg:
-    name: "{{ item }}"
-    state: present
-  loop:
-    - gdb
-  become: true
-  notify:
-  - Reboot

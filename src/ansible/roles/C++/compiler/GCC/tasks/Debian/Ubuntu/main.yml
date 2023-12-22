@@ -1,7 +1,0 @@
----
-- name: Install GNU C++ (g++) Compiler
-  ansible.builtin.apt:
-    pkg:
-    - build-essential
-    - g++
-  become: true
