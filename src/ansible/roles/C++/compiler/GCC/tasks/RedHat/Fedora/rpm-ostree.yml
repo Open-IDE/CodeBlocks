@@ -1,8 +1,9 @@
-- name: Install GNU C++ (g++) Compiler
+- name: Install GNU C++ Compiler
   community.general.rpm_ostree_pkg:
     name: "{{ item }}"
     state: present
   loop:
+    - gcc
     - g++
   become: true
   notify:

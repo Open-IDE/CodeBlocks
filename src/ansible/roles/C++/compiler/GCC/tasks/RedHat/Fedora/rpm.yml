@@ -1,7 +1,8 @@
 ---
-- name: Install GNU C++ (g++) Compiler
+- name: Install GNU C++ Compiler
   ansible.builtin.dnf:
     name:
+      - gcc
       - g++
     state: latest
   become: true
