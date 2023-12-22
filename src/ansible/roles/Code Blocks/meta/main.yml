@@ -1,5 +1,5 @@
 ---
 dependencies:
-  - compiler
+  - C++
   - Code Blocks/install
   - Code Blocks/config

@@ -1,0 +1,7 @@
+---
+- name: Install CMake
+  ansible.builtin.dnf:
+    name:
+      - cmake
+    state: latest
+  become: true

@@ -1,0 +1,7 @@
+---
+dependencies:
+  - C++/build tool/CMake
+  - C++/debugger/GDB
+  - C++/debugger/Valgrind
+  - C++/compiler
+  

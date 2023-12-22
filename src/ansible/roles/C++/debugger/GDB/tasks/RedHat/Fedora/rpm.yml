@@ -1,0 +1,7 @@
+---
+- name: Install GDB Debugger
+  ansible.builtin.dnf:
+    name:
+      - gdb
+    state: latest
+  become: true

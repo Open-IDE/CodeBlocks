@@ -1,0 +1,9 @@
+- name: Install CMake
+  community.general.rpm_ostree_pkg:
+    name: "{{ item }}"
+    state: present
+  loop:
+    - cmake
+  become: true
+  notify:
+  - Reboot

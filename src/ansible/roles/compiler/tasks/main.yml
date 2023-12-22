@@ -1,3 +1,0 @@
-- name: install Compiler
-  ansible.builtin.include_role:
-    name: "compiler/{{ compiler }}"
