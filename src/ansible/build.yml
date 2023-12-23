@@ -9,4 +9,4 @@
     os: ArchLinux
     debug: true
   roles:
-  - from source
+  - build from source

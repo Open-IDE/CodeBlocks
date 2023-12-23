@@ -1,0 +1,50 @@
+- name: Spell Checker - Hunspell
+  community.general.pacman:
+    name:
+      - hunspell
+    state: present
+    update_cache: true
+  become: true
+
+- name: Clangd
+  community.general.pacman:
+    name:
+      - extra/clang
+    state: present
+    update_cache: true
+  become: true
+
+- name: build Dependencies
+  community.general.pacman:
+    name:
+      - base-devel
+      - git
+      - subversion
+    state: present
+    update_cache: true
+  become: true
+
+# https://github.com/kewlfft/ansible-aur
+- name: Create the `aur_builder` user
+  become: yes
+  ansible.builtin.user:
+    name: aur_builder
+    create_home: yes
+    group: wheel
+
+- name: Allow the `aur_builder` user to run `sudo pacman` without a password
+  become: yes
+  ansible.builtin.lineinfile:
+    path: /etc/sudoers.d/11-install-aur_builder
+    line: 'aur_builder ALL=(ALL) NOPASSWD: /usr/bin/pacman'
+    create: yes
+    mode: 0644
+    validate: 'visudo -cf %s'
+
+- name: Build & install codeblocks-svn
+  aur:
+    name: codeblocks-svn  # https://aur.archlinux.org/packages/codeblocks-svn
+    use: makepkg
+    state: present
+  become: yes
+  become_user: aur_builder
