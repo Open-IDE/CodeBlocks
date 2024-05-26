@@ -1,6 +1,6 @@
 ---
 - name: Install CodeBlocks & Clangd Language Server
-  hosts: localhost # , node
+  hosts: localhost
   vars:
     build_from_source: false
     # compiler: Clang
