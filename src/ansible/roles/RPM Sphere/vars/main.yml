@@ -1,4 +1,0 @@
-rpmsphere_package_url: "https://github.com/rpmsphere/noarch/raw/master/r/rpmsphere-release-{{ ansible_distribution_major_version }}-1.noarch.rpm"
-
-# Temp: until Fix.
-disable_gpg_check: true

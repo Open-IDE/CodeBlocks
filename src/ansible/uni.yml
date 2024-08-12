@@ -1,21 +1,22 @@
 ---
 - name: Install CodeBlocks & Clangd Language Server
-  hosts: localhost
+  hosts: test #localhost
   vars:
     build_from_source: false
     # compiler: Clang
     # rerun_ansible_in_container: true
 
   roles:
-    - in Distrobox
-    - Code Blocks
+  - UniInc.CodeBlocks
+    # - in Distrobox
+    #- Code Blocks
 
-    - UniInc.Clang
-    - UniInc.GCC
-    - UniInc.GDB
-    - UniInc.CMake
+    # - UniInc.Clang
+    # - UniInc.GCC
+    # - UniInc.GDB
+    # - UniInc.CMake
 
 # The `codeblocks` package in most distro's repositories too old to use Clangd.
 # If you want to use latest Clangd Language Server: you must build from source!
 # or use Arch AUR
-    - UniInc.Language-server_Clangd
+    # - UniInc.Language-server_Clangd
