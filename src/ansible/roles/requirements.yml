@@ -4,13 +4,10 @@ roles:
 - UniInc.CodeBlocks-Settings
 - UniInc.GDB
 - UniInc.CMake
-
-#- name: UniInc.RPM-Fusion
-#- name: UniInc.RPM-Sphere
-
-#https://github.com/Open-IDE/C-plus-plus.Dev
-#- name: UniInc.Clang
 #- name: UniInc.Language-server_Clangd
 
 # Todo:
 #- name: UniInc.in-Container-Podman
+#- name: UniInc.RPM-Fusion
+#- name: UniInc.RPM-Sphere
+
