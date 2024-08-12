@@ -2,7 +2,6 @@
 roles:
 - UniInc.CodeBlocks
 - UniInc.CodeBlocks-Settings
-
 - UniInc.GDB
 - UniInc.CMake
 
