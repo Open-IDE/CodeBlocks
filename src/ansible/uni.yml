@@ -7,9 +7,14 @@
     # rerun_ansible_in_container: true
 
   roles:
-  # - language server/Clangd
+    - UniInc.Language-server_Clangd
     - in Distrobox
     - Code Blocks
+
+    - UniInc.Clang
+    - UniInc.GCC
+    - UniInc.GDB
+    - UniInc.CMake
 
 # The `codeblocks` package in most distro's repositories too old to use Clangd.
 # If you want to use latest Clangd Language Server: you must build from source!
