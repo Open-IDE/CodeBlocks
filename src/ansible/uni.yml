@@ -1,6 +1,6 @@
 ---
 - name: Install CodeBlocks & Clangd Language Server
-  hosts: test #localhost
+  hosts: node #localhost
   vars:
     build_from_source: false
     # compiler: Clang
@@ -8,13 +8,11 @@
 
   roles:
   - UniInc.CodeBlocks
+  - UniInc.CodeBlocks-Settings
     # - in Distrobox
-    #- Code Blocks
-
-    # - UniInc.Clang
-    # - UniInc.GCC
-    # - UniInc.GDB
-    # - UniInc.CMake
+  - UniInc.GDB
+  - UniInc.CMake
+# - UniInc.Clang
 
 # The `codeblocks` package in most distro's repositories too old to use Clangd.
 # If you want to use latest Clangd Language Server: you must build from source!

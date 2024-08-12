@@ -2,7 +2,7 @@
 localhost ansible_connection=local ansible_become_method=su
 
 [test]
-192.168.1.66
+192.168.122.52
 
 [node:children]
 test
